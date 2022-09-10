@@ -1,1 +1,1 @@
-SELECT * FROM `courses` having min(start_time);
+SELECT * FROM `courses` WHERE start_time = (SELECT min(start_time) from `courses`);
