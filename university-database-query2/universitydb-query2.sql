@@ -1,0 +1,1 @@
+SELECT * FROM `courses` having min(start_time);
