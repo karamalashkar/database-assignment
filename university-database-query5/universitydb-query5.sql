@@ -1,0 +1,1 @@
+SELECT * FROM `students` WHERE id NOT IN (SELECT student_id from enrolled);
