@@ -1,1 +1,3 @@
-select movie.name, movie.earnings_rank from movie, oscar WHERE movie.id = oscar.movie_id and oscar.type='Best-Picture' and movie.earnings_rank=(SELECT min(earnings_rank) from movie);
+select movie.name, min(movie.earnings_rank) 
+from movie, oscar 
+WHERE movie.id = oscar.movie_id and oscar.type='Best-Picture';
